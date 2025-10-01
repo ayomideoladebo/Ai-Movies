@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-gradient-to-br from-indigo-900 via-slate-900 to-purple-900 text-white;
+    font-family: 'Inter', system-ui, sans-serif;
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/10 backdrop-blur-md border border-white/20 rounded-xl shadow-xl;
+  }
+
+  .glass-button {
+    @apply bg-white/20 backdrop-blur-sm border border-white/30 rounded-lg px-4 py-2 text-white font-medium transition-all duration-200 hover:bg-white/30 hover:scale-105;
+  }
+
+  .glass-input {
+    @apply bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent;
+  }
+
+  .movie-card {
+    @apply glass-card p-4 transition-all duration-300 hover:scale-105 hover:shadow-2xl;
+  }
+
+  .hero-gradient {
+    @apply bg-gradient-to-r from-primary-600 via-purple-600 to-pink-600;
+  }
+}
